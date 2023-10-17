@@ -1,6 +1,6 @@
 var config = {
-    cUrl: 'https://api.countrystatecity.in/v1/countries',
-    ckey: 'NHhvOEcyWk50N2Vna3VFTE00bFp3MjFKR0ZEOUhkZlg4RTk1MlJlaA=='
+    country_Url: 'https://api.countrystatecity.in/v1/countries',
+    country_key: 'NHhvOEcyWk50N2Vna3VFTE00bFp3MjFKR0ZEOUhkZlg4RTk1MlJlaA=='
 }
 
 var countrySelect, stateSelect, citySelect;
@@ -17,11 +17,11 @@ $(document).ready(function() {
 });
 
 function loadCountries() {
-    var apiEndPoint = config.cUrl;
+    var apiEndPoint = config.country_Url;
 
     $.ajax({
         url: apiEndPoint,
-        headers: { "X-CSCAPI-KEY": config.ckey },
+        headers: { "X-CSCAPI-KEY": config.country_key },
         dataType: 'json',
         success: function(data) {
             data.forEach(function(country) {
@@ -49,8 +49,8 @@ function loadStates() {
     citySelect.html('<option value="">Select City</option>');
 
     $.ajax({
-        url: `${config.cUrl}/${selectedCountryCode}/states`,
-        headers: { "X-CSCAPI-KEY": config.ckey },
+        url: `${config.country_Url}/${selectedCountryCode}/states`,
+        headers: { "X-CSCAPI-KEY": config.country_key },
         dataType: 'json',
         success: function(data) {
             data.forEach(function(state) {
@@ -74,8 +74,8 @@ function loadCities() {
     citySelect.html('<option value="">Select City</option>');
 
     $.ajax({
-        url: `${config.cUrl}/${selectedCountryCode}/states/${selectedStateCode}/cities`,
-        headers: { "X-CSCAPI-KEY": config.ckey },
+        url: `${config.country_Url}/${selectedCountryCode}/states/${selectedStateCode}/cities`,
+        headers: { "X-CSCAPI-KEY": config.country_key },
         dataType: 'json',
         success: function(data) {
             data.forEach(function(city) {
