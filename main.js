@@ -2,7 +2,8 @@ var config = {
     country_Url: 'https://api.countrystatecity.in/v1/countries',
     country_key: 'NHhvOEcyWk50N2Vna3VFTE00bFp3MjFKR0ZEOUhkZlg4RTk1MlJlaA=='
 }
-
+console.log(config.country_Url);
+console.log(config.country_key);
 var countrySelect, stateSelect, citySelect;
 
 $(document).ready(function() {
