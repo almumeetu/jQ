@@ -4,7 +4,13 @@ $(document).ready(function(){
     var data = {
         "Bangladesh": {
             "Dhaka": ["Dhaka", "Gazipur", "Narayanganj"],
+            "Rajshahi": ["Rajshahi","Naogaon", "Joypurhat", "Bogura"],
+            "Sylhet": ["Sylhet", "Cox's Bazar", "Comilla"],
+            "Khulna": ["Khulna", "Cox's Bazar", "Comilla"],
+            "Borishal": ["Borishal", "Cox's Bazar", "Comilla"],
+            "Rangpur": ["Rangpur", "Cox's Bazar", "Comilla"],
             "Chittagong": ["Chittagong", "Cox's Bazar", "Comilla"],
+            
             // Add more states and cities as needed
         },
         "United States": {
@@ -29,23 +35,23 @@ $(document).ready(function(){
             // Add more states and cities as needed
         },
 
-        "Bangladesh": {
+        "England": {
             "Dhaka": ["Dhaka", "Gazipur", "Narayanganj"],
             "Chittagong": ["Chittagong", "Cox's Bazar", "Comilla"],
             // Add more states and cities as needed
         },
-        "Bangladesh": {
+        "Franch": {
             "Dhaka": ["Dhaka", "Gazipur", "Narayanganj"],
             "Chittagong": ["Chittagong", "Cox's Bazar", "Comilla"],
             // Add more states and cities as needed
         },
-        "Bangladesh": {
+        "Italy": {
             "Dhaka": ["Dhaka", "Gazipur", "Narayanganj"],
             "Chittagong": ["Chittagong", "Cox's Bazar", "Comilla"],
             // Add more states and cities as needed
         }
     };
-
+ 
     // Populate country dropdown
     for (var country in data) {
         $('.country').append('<option value="'+country+'">'+country+'</option>');
