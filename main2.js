@@ -57,7 +57,7 @@ $(document).ready(function(){
         var states = data[selectedCountry];
         $('.state').empty(); // Clear old options
 
-        for (var state in states) {
+        for (var state in states) { 
             $('.state').append('<option value="'+state+'">'+state+'</option>');
         }
 
