@@ -31,6 +31,7 @@ function loadCountries() {
                 option.text(country.name);
                 countrySelect.append(option);
             });
+            console.log("Countries DATA: ",data);
         },
         error: function(error) {
             console.error('Error loading countries:', error);
@@ -60,6 +61,7 @@ function loadStates() {
                 option.text(state.name);
                 stateSelect.append(option);
             });
+            console.log("States DATA: ",data);
         },
         error: function(error) {
             console.error('Error loading states:', error);
@@ -85,6 +87,7 @@ function loadCities() {
                 option.text(city.name);
                 citySelect.append(option);
             });
+            console.log("Citys DATA: ",data);
         },
         error: function(error) {
             console.error('Error loading cities:', error);
