@@ -53,7 +53,7 @@ $(document).ready(function(){
     };
  
     // Populate country dropdown
-    for (var country in data) {
+    for (var country in data) { //Bangladesh
         $('.country').append('<option value="'+country+'">'+country+'</option>');
     }
 
@@ -67,11 +67,11 @@ $(document).ready(function(){
             $('.state').append('<option value="'+state+'">'+state+'</option>');
         }
 
-        // Trigger state change event to update city dropdown
+        // Trigger state change event to update city dropdown   
         $('.state').change();
     });
 
-    // When state selection changes, update city dropdown
+// When state selection changes, update city dropdown   
     $('.state').change(function(){
         var selectedCountry = $('.country').val();
         var selectedState = $(this).val();
